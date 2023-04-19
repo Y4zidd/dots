@@ -1,0 +1,21 @@
+#!/bin/bash
+
+cd $(dirname $0)
+
+export PATH="$PWD:$PATH"
+
+launch () {
+  ${@} &
+}
+
+feh --bg-scale $PWD/../wallpapers/sea.jpg
+pkill picom; picom -b
+pkill widgets; launch widgets
+
+cd $HOME
+
+if ! eww ping 2>&1 > /dev/null; then
+  eww daemon &
+fi
+
+exec dwm
