@@ -1,5 +1,5 @@
 # dots
 
-<b>wm = dwm 
-<b>text editor = neovim
-<b>file manager = ranger
+wm = dwm <br>
+text editor = neovim <br>
+file manager = ranger <br>
